@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Huzaifa Shaikh | Personal Portfolio</title>
+  <meta name="description" content="Personal portfolio and biography of Huzaifa Shaikh, featuring modern dark grey and gold aesthetics with interactive project showcases.">
+  
+  <!-- Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Navigation Bar -->
+  <nav class="navbar">
+    <a href="#" class="nav-logo">
+      <img src="logo.png" alt="Logo" class="logo-img">
+    </a>
+    
+    <button class="burger-menu" id="burger-toggle" aria-label="Toggle Navigation Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-links" id="nav-menu">
+      <a href="#projects" class="nav-link" data-target="projects">Projects &amp; articles</a>
+      <a href="#biography" class="nav-link" data-target="biography">Bio</a>
+      <a href="#contact" class="nav-link" data-target="contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-banner-container">
+        <!-- Widescreen hero image -->
+        <img src="hero.png" alt="Huzaifa Shaikh Hero Banner" class="hero-image" id="hero-img">
+      </div>
+    </section>
+
+    <!-- Projects and Articles Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <!-- Discreet section label with horizontal line as requested in layout -->
+        <div class="discreet-header">
+          <span class="header-label">Projects & Articles</span>
+          <div class="header-line"></div>
+        </div>
+
+        <!-- Carousel Container -->
+        <div class="carousel-container">
+          <!-- Control Buttons -->
+          <button class="carousel-btn btn-prev" id="carousel-prev" aria-label="Previous Project">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          
+          <button class="carousel-btn btn-next" id="carousel-next" aria-label="Next Project">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <!-- Slider Track -->
+          <div class="carousel-track-wrapper">
+            <div class="carousel-track" id="carousel-track">
+              
+              <!-- Card 1 (Project) -->
+              <div class="project-card" data-index="0">
+                <span class="card-badge">project</span>
+                <div class="card-image-wrapper">
+                  <img src="assets/project_web_app.png" alt="Aurum Financial Analytics Dashboard" class="card-image">
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">Aurum Analytics</h3>
+                  <p class="card-description">A high-fidelity wealth management and real-time financial tracking dashboard.</p>
+                  <div class="card-footer">
+                    <span class="explore-text">Explore Case Study</span>
+                    <i class="fa-solid fa-arrow-right-long footer-icon"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 (Project) -->
+              <div class="project-card" data-index="1">
+                <span class="card-badge">project</span>
+                <div class="card-image-wrapper">
+                  <img src="assets/project_mobile_app.png" alt="Aethelred Mobile Wallet Interface" class="card-image">
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">Aethelred Wallet</h3>
+                  <p class="card-description">A sleek, dark-themed iOS mobile banking application for secure micro-transactions.</p>
+                  <div class="card-footer">
+                    <span class="explore-text">Explore Case Study</span>
+                    <i class="fa-solid fa-arrow-right-long footer-icon"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 (Article) -->
+              <div class="project-card" data-index="2">
+                <span class="card-badge">article</span>
+                <div class="card-image-wrapper">
+                  <img src="assets/project_abstract_ai.png" alt="Synthetix Neural Network Visual" class="card-image">
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">Synthetix Network</h3>
+                  <p class="card-description">An in-depth article exploring the evolution of generative deep learning models.</p>
+                  <div class="card-footer">
+                    <span class="explore-text">Read Article</span>
+                    <i class="fa-solid fa-arrow-right-long footer-icon"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 (Article) -->
+              <div class="project-card" data-index="3">
+                <span class="card-badge">article</span>
+                <div class="card-image-wrapper">
+                  <img src="assets/project_creative_space.png" alt="Minimal Studio Space Design" class="card-image">
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">Aesthetic Workspace</h3>
+                  <p class="card-description">A study on how environmental lighting and minimalism drive developer productivity.</p>
+                  <div class="card-footer">
+                    <span class="explore-text">Read Article</span>
+                    <i class="fa-solid fa-arrow-right-long footer-icon"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Pagination Indicators -->
+          <div class="carousel-dots" id="carousel-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Biography / About Me Section -->
+    <section id="biography" class="biography-section">
+      <div class="container bio-layout">
+
+        
+        <div class="bio-content">
+          <div class="bio-text">
+            <p class="bio-lead">
+              Hello! I'm Huzaifa. I build digital architectures that bridge the gap between heavy software engineering and sophisticated, premium user interface design. 
+            </p>
+            <p>
+              [Write about yourself here. This is a placeholder for your personal journey, your engineering background, your philosophy on web development, and the types of problems you love solving.]
+            </p>
+            <p>
+              [Describe your primary stack, whether you focus on front-end aesthetics, back-end scalability, mobile applications, or full-stack integrations. You can add personal anecdotes about how you got started in tech and what drives your creative process daily.]
+            </p>
+          </div>
+          
+          <div class="bio-sidebar">
+            <div class="bio-widget">
+              <h4 class="widget-title">Core Disciplines</h4>
+              <ul class="widget-list">
+                <li><i class="fa-solid fa-code text-gold"></i> Full Stack Development</li>
+                <li><i class="fa-solid fa-wand-magic-sparkles text-gold"></i> Premium UI/UX Design</li>
+                <li><i class="fa-solid fa-cube text-gold"></i> Interactive Web Applications</li>
+                <li><i class="fa-solid fa-bolt text-gold"></i> Performance Optimization</li>
+              </ul>
+            </div>
+            
+            <div class="bio-widget">
+              <h4 class="widget-title">Design Philosophy</h4>
+              <p class="widget-quote">"Simplicity is the ultimate sophistication. Design is not just what it looks like, but how it works."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-info">
+            <h2 class="contact-title">Let's Create Together</h2>
+            <p class="contact-desc">Have a project in mind, an article concept to discuss, or just want to connect? Drop a message below.</p>
+            <div class="contact-details">
+              <div class="detail-item">
+                <i class="fa-solid fa-envelope text-gold"></i>
+                <span>contact@huzaifashaikh.com</span>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-location-dot text-gold"></i>
+                <span>Toronto, Canada</span>
+              </div>
+            </div>
+          </div>
+          
+          <form class="contact-form" id="contact-form" onsubmit="event.preventDefault(); alert('Message sent! (Mock implementation)');">
+            <div class="form-group">
+              <label for="form-name">Name</label>
+              <input type="text" id="form-name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="form-email">Email</label>
+              <input type="email" id="form-email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" rows="4" placeholder="Hi Huzaifa, I'd love to work on..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Custom Detail Modal Overlay -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close" aria-label="Close details">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-grid">
+        <div class="modal-image-container">
+          <img src="" alt="" id="modal-img" class="modal-hero-image">
+        </div>
+        <div class="modal-details">
+          <span class="modal-badge" id="modal-badge">project</span>
+          <h2 class="modal-title" id="modal-title">Project Name</h2>
+          <div class="modal-desc" id="modal-desc">Detailed project description goes here...</div>
+          <div class="modal-meta-list">
+            <div class="meta-item">
+              <span class="meta-label">Stack:</span>
+              <span class="meta-val">HTML5, Vanilla CSS, JavaScript ES6</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Design:</span>
+              <span class="meta-val">Dark Grey &amp; Gold Aesthetic (#e9a881)</span>
+            </div>
+          </div>
+          <a href="#" class="modal-action-btn" id="modal-link" target="_blank">
+            <span>Visit Live Project</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="copyright">&copy; 2026 Huzaifa Shaikh. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
