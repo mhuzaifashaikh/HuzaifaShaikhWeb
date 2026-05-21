@@ -11,9 +11,9 @@
   --text-secondary: #a3a3a3;
   --border-color: rgba(233, 168, 129, 0.08);
   --border-color-hover: rgba(233, 168, 129, 0.25);
-  --font-serif: 'Roboto', system-ui, -apple-system, sans-serif;
-  --font-sans: 'Open Sans', system-ui, -apple-system, sans-serif;
-  --font-subheading: 'Google Sans', 'Product Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Sniglet', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Sniglet', system-ui, -apple-system, sans-serif;
+  --font-subheading: 'Sniglet', system-ui, -apple-system, sans-serif;
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast: all 0.2s ease;
   
@@ -26,6 +26,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-weight: 400 !important;
 }
 
 html {
@@ -229,7 +230,7 @@ img {
 .header-label {
   font-family: var(--font-subheading);
   font-size: 0.85rem;
-  text-transform: lowercase;
+  text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--text-secondary);
   font-weight: 400;
@@ -471,7 +472,7 @@ img {
   font-size: 1.35rem;
   font-weight: 400;
   color: var(--text-primary);
-  margin-bottom: 3rem;
+  margin-bottom: 1.25rem;
   letter-spacing: 0.02em;
 }
 
