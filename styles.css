@@ -11,10 +11,9 @@
   --text-secondary: #a3a3a3;
   --border-color: rgba(233, 168, 129, 0.08);
   --border-color-hover: rgba(233, 168, 129, 0.25);
-  
-  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Roboto', system-ui, -apple-system, sans-serif;
   --font-sans: 'Open Sans', system-ui, -apple-system, sans-serif;
-  
+  --font-subheading: 'Google Sans', 'Product Sans', system-ui, -apple-system, sans-serif;
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast: all 0.2s ease;
   
@@ -228,6 +227,7 @@ img {
 }
 
 .header-label {
+  font-family: var(--font-subheading);
   font-size: 0.85rem;
   text-transform: lowercase;
   letter-spacing: 0.2em;
@@ -284,6 +284,7 @@ img {
 }
 
 .card-badge {
+  font-family: var(--font-subheading);
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
@@ -466,7 +467,7 @@ img {
 }
 
 .bio-subtitle {
-  font-family: var(--font-sans);
+  font-family: var(--font-subheading);
   font-size: 1.35rem;
   font-weight: 400;
   color: var(--text-primary);
