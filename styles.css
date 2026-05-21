@@ -192,8 +192,8 @@ img {
    ========================================================================== */
 .hero-section {
   width: 100%;
-  height: 100vh;
-  height: 100dvh;
+  height: 85vh;
+  height: 85dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -865,22 +865,22 @@ img {
     padding: 0 1.25rem;
   }
 
-  /* ---- Hero fix: fullscreen on mobile ---- */
+  /* ---- Hero fix: auto height and full width on mobile ---- */
   .hero-section {
-    padding: 0;
-    height: 100vh;
-    height: 100dvh;
+    padding: 5.5rem 0.5rem 2rem 0.5rem;
+    height: auto;
+    display: block;
   }
 
   .hero-banner-container {
     padding: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 
   .hero-image {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: contain;
   }
 
