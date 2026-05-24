@@ -44,6 +44,8 @@ function initNavbar() {
     });
   }
 
+  const scrollIndicator = document.querySelector('.scroll-indicator');
+
   // Track active scroll section
   window.addEventListener('scroll', () => {
     let current = '';
@@ -62,6 +64,15 @@ function initNavbar() {
         link.classList.add('active');
       }
     });
+
+    // Fade out scroll indicator on scroll
+    if (scrollIndicator) {
+      if (window.scrollY > 50) {
+        scrollIndicator.classList.add('fade-out');
+      } else {
+        scrollIndicator.classList.remove('fade-out');
+      }
+    }
   });
 }
 

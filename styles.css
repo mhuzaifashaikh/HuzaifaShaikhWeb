@@ -201,6 +201,7 @@ img {
 .hero-banner-container {
   width: 100%;
   height: 100%;
+  padding-top: 110px; /* Push image down so head starts below the floating navbar */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -215,39 +216,69 @@ img {
 /* Scroll Indicator */
 .scroll-indicator {
   position: absolute;
-  bottom: 1.5rem;
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--text-secondary);
-  opacity: 0.6;
+  bottom: 0px; /* Touch the absolute bottom of the screen */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 60px;
   cursor: pointer;
   z-index: 5;
   transition: opacity 0.3s ease;
 }
 
-.scroll-indicator:hover {
-  opacity: 1;
+.scroll-indicator.fade-out {
+  opacity: 0;
+  pointer-events: none;
 }
 
-.scroll-label {
-  font-family: var(--font-sans);
-  font-size: 0.6rem;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
+.scroll-indicator .arrows {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  /* Gold color glow using drop-shadow */
+  filter: drop-shadow(0 0 6px rgba(var(--color-gold-rgb), 0.8));
 }
 
-.scroll-icon {
-  font-size: 1rem;
-  animation: scrollBounce 2s ease-in-out infinite;
+.scroll-indicator .arrows::before,
+.scroll-indicator .arrows::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-left: 8px solid rgba(var(--color-gold-rgb), 0.7);
+  border-bottom: 8px solid rgba(var(--color-gold-rgb), 0.7);
 }
 
-@keyframes scrollBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
+.scroll-indicator .arrows::before {
+  transform: translate(8px, 32px) rotate(-45deg);
+  animation: arrowsAnimation 3s linear infinite;
+}
+
+.scroll-indicator .arrows::after {
+  transform: translate(16px, 0px) rotate(-45deg);
+  animation: arrowsAnimation 3s linear infinite -1.5s;
+}
+
+@keyframes arrowsAnimation {
+  0% {
+    border-left-color: rgba(var(--color-gold-rgb), 0);
+    border-bottom-color: rgba(var(--color-gold-rgb), 0);
+    transform: translate(-4px, -16px) rotate(-45deg);
+  }
+  10%, 90% {
+    border-left-color: rgba(var(--color-gold-rgb), 0);
+    border-bottom-color: rgba(var(--color-gold-rgb), 0);
+  }
+  50% {
+    border-left-color: rgba(var(--color-gold-rgb), 0.7);
+    border-bottom-color: rgba(var(--color-gold-rgb), 0.7);
+    transform: translate(-4px, 0px) rotate(-45deg);
+  }
+  100% {
+    border-left-color: rgba(var(--color-gold-rgb), 0);
+    border-bottom-color: rgba(var(--color-gold-rgb), 0);
+    transform: translate(-4px, 16px) rotate(-45deg);
+  }
 }
 
 /* ==========================================================================
@@ -889,14 +920,8 @@ img {
   .modal-card {
     max-width: 800px;
   }
-}
 
-@media (max-width: 768px) {
-  .container {
-    padding: 0 1.25rem;
-  }
-
-  /* ---- Hero fix: auto height and full width on mobile ---- */
+  /* ---- Hero fix: auto height and full width on mobile/tablets ---- */
   .hero-section {
     padding: 5.5rem 0.5rem 2rem 0.5rem;
     height: auto;
@@ -917,6 +942,12 @@ img {
 
   .scroll-indicator {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
   }
 
   /* ---- Navbar: full-width pill with logo + burger ---- */
