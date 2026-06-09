@@ -537,11 +537,52 @@ img {
   line-height: 1.1;
 }
 
+.bio-subtitle {
+  font-family: var(--font-subheading);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.bio-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.bio-list-item {
+  position: relative;
+  padding-left: 2rem;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+.bio-list-item::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-gold);
+  font-weight: bold;
+}
+
+.bio-item-title {
+  color: var(--text-primary);
+  font-weight: 700;
+  display: inline;
+}
+
 .bio-story {
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 
 .bio-story-section {
