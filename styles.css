@@ -537,45 +537,34 @@ img {
   line-height: 1.1;
 }
 
-.bio-subtitle {
-  font-family: var(--font-subheading);
-  font-size: 1.35rem;
-  font-weight: 400;
-  color: var(--text-primary);
-  margin-bottom: 1.25rem;
-  letter-spacing: 0.02em;
-}
-
-.bio-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.bio-story {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 3.5rem;
+  margin-top: 2rem;
 }
 
-.bio-list-item {
-  position: relative;
-  padding-left: 2rem;
+.bio-story-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.bio-story-heading {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  color: var(--color-gold);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid rgba(var(--color-gold-rgb), 0.15);
+  padding-bottom: 0.5rem;
+}
+
+.bio-story-section p {
   font-family: var(--font-sans);
   font-size: 1.05rem;
-  line-height: 1.75;
+  line-height: 1.8;
   color: var(--text-secondary);
-}
-
-.bio-list-item::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--color-gold);
-  font-weight: bold;
-}
-
-.bio-item-title {
-  color: var(--text-primary);
-  font-weight: 700;
-  display: inline;
 }
 
 /* ==========================================================================
@@ -1038,8 +1027,16 @@ img {
   }
 
   /* Biography layout */
-  .bio-title-text {
-    font-size: 2.5rem;
+  .bio-main-title {
+    font-size: 2.75rem;
+  }
+
+  .bio-story-heading {
+    font-size: 1.6rem;
+  }
+
+  .bio-story {
+    gap: 2.5rem;
   }
 
   /* Contact Card column */
