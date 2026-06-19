@@ -274,28 +274,52 @@ function initModal() {
   // Rich data objects for the projects modal
   const projectData = [
     {
-      title: "Aurum Analytics",
+      title: "Saharah",
       category: "project",
-      imgSrc: "assets/project_web_app.png",
-      description: "Aurum is a next-generation financial intelligence platform built for private wealth management. It features custom asset allocation wheels, real-time candlestick feeds, and interactive mock gain indicators. The project leverages vanilla ES6 JavaScript Web Components and CSS Grid for high-performance layout rendering."
+      imgSrc: "assets/saharahlogo.png",
+      description: "A freelance project for an e-commerce client who sells traditional South Asian clothing for Women. Developed as a full-stack e-commerce application showcasing a modern, serverless architecture on AWS. The front end was built with React and bundled/deployed via AWS Amplify, leveraging a CI/CD pipeline connected to GitHub. The app's domain is managed with Amazon Route 53, ensuring custom URL and DNS configuration."
     },
     {
-      title: "Aethelred Wallet",
+      title: "Xevron",
       category: "project",
-      imgSrc: "assets/project_mobile_app.png",
-      description: "Aethelred redefines mobile banking with its minimalist dark mode aesthetic and biometric integration. The application offers users smooth transition micro-interactions, swipe-to-pay functionality, and detailed transaction histories. It was created with performance and responsiveness in mind, utilizing hardware-accelerated animations."
+      imgSrc: "assets/xevLogo.png",
+      description: "A comprehensive full-stack AWS application designed to provide a seamless user experience. Upon signing in or registering, users are welcomed by a beautiful homepage offering easy access to their client portfolio. A sleek and efficiently designed form enables rapid data entry, directly updating a cloud-based database. Following submission, users are redirected to a dedicated client management page showcasing a comprehensive list of all clients."
     },
     {
-      title: "Synthetix Network",
-      category: "article",
-      imgSrc: "assets/project_abstract_ai.png",
-      description: "This article breaks down complex neural network structures, explaining the mathematical foundations of generative nodes and latent space routing. Accompanied by interactive visualizations, the piece has been featured in top-tier tech publications and remains a key asset for learners."
+      title: "VirtueGPT",
+      category: "project",
+      imgSrc: "assets/VirtueGPT.png",
+      description: "An AI-powered faith-based companion crafted to offer deep spiritual guidance and unwavering support to users facing life's ups and downs. Created using the latest tech to make it an engaging and life-changing experience, with an average of 145+ users benefiting from it daily."
     },
     {
-      title: "Aesthetic Workspace",
+      title: "Apple E-Commerce",
+      category: "project",
+      imgSrc: "assets/MT.jpg",
+      description: "Worked in a team of 3 and developed a comprehensive e-commerce platform (an online store tailored for Apple products). This project leverages Java (Spring Boot) for backend services, a Spring MVC architecture, SQLite for database management, and a modern UI/UX using HTML/CSS for the frontend. Employs Docker to encapsulate the application environment. Tasked with creating a real-time bidding system utilizing web sockets to notify bidders dynamically and maintain live bid updates."
+    },
+    {
+      title: "Intro to Machine Learning",
       category: "article",
-      imgSrc: "assets/project_creative_space.png",
-      description: "Exploring the intersections of physical ergonomics, minimal aesthetic design, and warm ambient lighting. This research paper shows how cohesive workspaces reduce developer cognitive load and improve deep work focus. It outlines practical rules for staging dev environments."
+      imgSrc: "assets/ML.png",
+      description: "A carefully crafted article that provides a broad image of Machine Learning and Artificial Intelligence, ensuring you gain enough understanding to engage in basic discussions."
+    },
+    {
+      title: "Amazon SageMaker",
+      category: "article",
+      imgSrc: "assets/sagemaker.png",
+      description: "An article that explains how Amazon SageMaker, a fully managed ML service from AWS, significantly reduces the cost and complexity of scaling, managing infrastructure, and deploying machine learning models."
+    },
+    {
+      title: "Object-Oriented Programming",
+      category: "article",
+      imgSrc: "assets/OOP.jpg",
+      description: "An article that goes into great detail about the possible benefits and drawbacks of using OOP and its features in designing and implementing software."
+    },
+    {
+      title: "Open-Source Operating Systems",
+      category: "article",
+      imgSrc: "assets/OS.jpg",
+      description: "An article that goes into everything about open-source operating systems, exploring their architecture, history, and community-driven development models."
     }
   ];
 
