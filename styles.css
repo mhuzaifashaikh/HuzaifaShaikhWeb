@@ -294,7 +294,7 @@ img {
   display: flex;
   align-items: center;
   gap: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .header-label {
@@ -588,14 +588,14 @@ img {
 .bio-story-section {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 0;
 }
 
 .bio-story-heading {
   font-family: var(--font-serif);
   font-size: 1.85rem;
   color: var(--color-gold);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   letter-spacing: 0.02em;
   border-bottom: 1px solid rgba(var(--color-gold-rgb), 0.15);
   padding-bottom: 0.5rem;
@@ -606,6 +606,11 @@ img {
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.bio-story-section p:last-child {
+  margin-bottom: 0;
 }
 
 /* ==========================================================================
@@ -840,7 +845,7 @@ img {
   font-family: var(--font-serif);
   font-size: 2.25rem;
   font-weight: 400;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
   line-height: 1.2;
 }
 
