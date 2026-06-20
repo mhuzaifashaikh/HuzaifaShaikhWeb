@@ -36,7 +36,16 @@
 
     <div class="nav-links" id="nav-menu">
       <a href="#projects" class="nav-link" data-target="projects">Projects &amp; articles</a>
-      <a href="#biography" class="nav-link" data-target="biography">Bio</a>
+      <div class="nav-dropdown">
+        <a href="#biography" class="nav-link dropdown-toggle" data-target="biography">Bio <i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+        <div class="dropdown-menu">
+          <a href="#bio-early-life" class="dropdown-item">Early Life</a>
+          <a href="#bio-school" class="dropdown-item">School</a>
+          <a href="#bio-university" class="dropdown-item">University</a>
+          <a href="#bio-ai" class="dropdown-item">AI</a>
+          <a href="#bio-sales" class="dropdown-item">Sales</a>
+        </div>
+      </div>
       <a href="#contact" class="nav-link" data-target="contact">Contact</a>
     </div>
   </nav>
@@ -59,28 +68,30 @@
     </section>
 
     <!-- Projects and Articles Section -->
+    <!-- Projects and Articles Section -->
     <section id="projects" class="projects-section">
       <div class="container">
-        <!-- Discreet section label with horizontal line as requested in layout -->
+        
+        <!-- ================= PROJECTS CAROUSEL ================= -->
         <div class="discreet-header">
-          <span class="header-label">PROJECTS & ARTICLES</span>
+          <span class="header-label">PROJECTS</span>
           <div class="header-line"></div>
         </div>
 
-        <!-- Carousel Container -->
+        <!-- Carousel Container for Projects -->
         <div class="carousel-container">
           <!-- Control Buttons -->
-          <button class="carousel-btn btn-prev" id="carousel-prev" aria-label="Previous Project">
+          <button class="carousel-btn btn-prev" id="projects-prev" aria-label="Previous Project">
             <i class="fa-solid fa-chevron-left"></i>
           </button>
 
-          <button class="carousel-btn btn-next" id="carousel-next" aria-label="Next Project">
+          <button class="carousel-btn btn-next" id="projects-next" aria-label="Next Project">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
 
           <!-- Slider Track -->
           <div class="carousel-track-wrapper">
-            <div class="carousel-track" id="carousel-track">
+            <div class="carousel-track" id="projects-track">
 
               <!-- Card 1 (Project) -->
               <div class="project-card" data-index="0">
@@ -145,6 +156,42 @@
                   </div>
                 </div>
               </div>
+
+            </div>
+          </div>
+
+          <!-- Pagination Indicators -->
+          <div class="carousel-dots" id="projects-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+          </div>
+        </div>
+
+        <!-- Elegant spacer between carousels -->
+        <div style="margin-top: 5rem;"></div>
+
+        <!-- ================= ARTICLES CAROUSEL ================= -->
+        <div class="discreet-header">
+          <span class="header-label">ARTICLES & WRITING</span>
+          <div class="header-line"></div>
+        </div>
+
+        <!-- Carousel Container for Articles -->
+        <div class="carousel-container">
+          <!-- Control Buttons -->
+          <button class="carousel-btn btn-prev" id="articles-prev" aria-label="Previous Article">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <button class="carousel-btn btn-next" id="articles-next" aria-label="Next Article">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <!-- Slider Track -->
+          <div class="carousel-track-wrapper">
+            <div class="carousel-track" id="articles-track">
 
               <!-- Card 5 (Article) -->
               <div class="project-card" data-index="4">
@@ -214,15 +261,11 @@
           </div>
 
           <!-- Pagination Indicators -->
-          <div class="carousel-dots" id="carousel-dots">
+          <div class="carousel-dots" id="articles-dots">
             <span class="dot active" data-index="0"></span>
             <span class="dot" data-index="1"></span>
             <span class="dot" data-index="2"></span>
             <span class="dot" data-index="3"></span>
-            <span class="dot" data-index="4"></span>
-            <span class="dot" data-index="5"></span>
-            <span class="dot" data-index="6"></span>
-            <span class="dot" data-index="7"></span>
           </div>
         </div>
       </div>
@@ -259,7 +302,7 @@
 
         <div class="bio-story">
           <div class="bio-story-section">
-            <h3 class="bio-story-heading">Early Life</h3>
+            <h3 class="bio-story-heading" id="bio-early-life">Early Life</h3>
             <p>My parents migrated to the Middle East before I was born, and after spending the first three years of my life in Bahrain, we eventually moved to the UAE. I then grew up in Dubai, where we lived a modest and unassuming life.</p>
             <p>Growing up, my father always provided for us in a way that made it feel like we had everything we needed. I genuinely believed we were doing far better financially than we actually were. But as I got older, I slowly began to understand the reality. My father was not only supporting us, but also financially helping many other people at the same time. To this day, I still do not fully understand how he managed to carry that responsibility so consistently and so quietly.</p>
             <p>As a child, I was extremely fascinated by electronics and circuits. I became obsessed with understanding how things worked internally. I used to beg my dad to buy me remote-controlled cars, because I wanted to take them apart the moment I got home. I would open them up just to pull out the motors, wiring, batteries, and circuit boards so I could experiment and build random electronic creations of my own.</p>
@@ -267,7 +310,7 @@
           </div>
 
           <div class="bio-story-section">
-            <h3 class="bio-story-heading">School</h3>
+            <h3 class="bio-story-heading" id="bio-school">School</h3>
             <p>My school life felt like it existed on a spectrum.</p>
             <p>On one end, there were the kids who got along with everyone. They were popular, social, always having fun, and involved in everything except studying. But academically, they struggled.</p>
             <p>On the other end, there were the students who excelled in academics but barely had a social life. They were always studying, always focused, and in many ways, their loneliness felt almost contagious.</p>
@@ -279,7 +322,7 @@
           </div>
 
           <div class="bio-story-section">
-            <h3 class="bio-story-heading">University</h3>
+            <h3 class="bio-story-heading" id="bio-university">University</h3>
             <p>After completing high school in Dubai, I moved to Toronto to pursue an undergraduate degree in computer science. Looking back, that was one of the biggest turning points in my life.</p>
             <p>I mean not just that I had started university, but I had entered a completely new world. I was in a new country, surrounded by new people, living alone for the first time, adjusting to a different culture, and experiencing weather that felt almost unreal compared to Dubai.</p>
             <p>In my first year, I adapted fairly quickly. I made a lot of friends, and once again, soccer played a big role in helping me connect with people. At the same time, I started genuinely enjoying computer science, especially the lab sessions where we got to be hands-on with code.</p>
@@ -294,13 +337,13 @@
           </div>
 
           <div class="bio-story-section">
-            <h3 class="bio-story-heading">AI</h3>
+            <h3 class="bio-story-heading" id="bio-ai">AI</h3>
             <p>So.. I’m officially a Computer Science Graduate! ..Now what? Well.. graduating in the summer of 2023 was a brutal setup, and the data from the National Association of Colleges and Employers shows exactly why. Back in late 2022, companies were projecting a massive 15% increase in new grad hiring. By the time we actually walked the stage in spring 2023, that projected growth crashed down to just 3.9%. For those of us in tech, it was even worse. The information sector flipped from a massive 87% expected hiring boom to an actual 17% cut in entry-level roles. It was the ultimate rug pull right at the finish line.</p>
             <p>That is when I ended up picking up a gig on Scale AI’s Outlier platform to do AI data training. Talk about a reality check. After years of grinding through a computer science degree, my new job was basically babysitting an AI and explaining why its math was wrong. I was essentially training the very technology that will probably take my future job anyway. But honestly, I could not complain because the gig actually paid surprisingly well. The money was so solid that arguing with a computer paid better than most actual entry-level roles, which at least kept my bank account happy while I figured out my next move.</p>
           </div>
 
           <div class="bio-story-section">
-            <h3 class="bio-story-heading">Sales Sales Sales</h3>
+            <h3 class="bio-story-heading" id="bio-sales">Sales Sales Sales</h3>
             <p>After about a year, the AI data training gig started to lose its steam. The cash was decent for a temporary setup, but it was nowhere near enough to actually build a real life on, and I realized my long-term career options were looking pretty mundane.</p>
             <p>That is when a close friend of mine stepped in. He was working for Telus doing door to door sales, pitching everything from mobile plans to full home security systems. We were talking about it, and he told me I would be great at it because I am naturally social. He promised the money would be surprisingly good if I just went all out. So, I decided to give it a shot, and it actually went well.</p>
             <p>Now, knocking on strangers' doors is definitely not for everyone. I had my fair share of doors slammed right in my face, which regularly sent me straight into a mini early adulthood crisis right there on the pavement. But every single day on that grind forced me to learn some of life’s most essential skills. I learned how to shake off rejection without taking it personally, how to read a person instantly, and how to communicate clearly and confidently with just about anyone.</p>
@@ -365,21 +408,8 @@
         <div class="modal-details">
           <span class="modal-badge" id="modal-badge">project</span>
           <h2 class="modal-title" id="modal-title">Project Name</h2>
-          <div class="modal-desc" id="modal-desc">Detailed project description goes here...</div>
-          <div class="modal-meta-list">
-            <div class="meta-item">
-              <span class="meta-label">Stack:</span>
-              <span class="meta-val">HTML5, Vanilla CSS, JavaScript ES6</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">Design:</span>
-              <span class="meta-val">Dark Grey &amp; Gold Aesthetic (#e9a881)</span>
-            </div>
-          </div>
-          <a href="#" class="modal-action-btn" id="modal-link" target="_blank">
-            <span>Visit Live Project</span>
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
+          <div class="modal-desc" id="modal-desc"></div>
+          <div class="modal-actions" id="modal-actions"></div>
         </div>
       </div>
     </div>
