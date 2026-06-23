@@ -1247,21 +1247,35 @@ img {
     position: static;
     transform: none;
     box-shadow: none;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid transparent;
     background: rgba(255, 255, 255, 0.02);
     border-radius: 12px;
-    opacity: 1;
-    visibility: visible;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    padding: 0.6rem 0;
-    margin: 0.5rem 0;
     width: 80%;
     max-width: 240px;
     min-width: auto;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+    
+    /* Accordion transition defaults */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+    transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, margin 0.3s ease, padding 0.3s ease, visibility 0.3s ease, border-color 0.3s ease;
+  }
+
+  .nav-dropdown.expanded .dropdown-menu {
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0.6rem 0;
+    margin: 0.5rem 0;
+    border-color: rgba(255, 255, 255, 0.05);
   }
   
   .dropdown-item {
@@ -1291,7 +1305,20 @@ img {
   }
   
   .dropdown-arrow {
-    display: none;
+    display: inline-block;
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+    margin-left: 0.35rem;
+    color: var(--text-secondary);
+  }
+
+  .nav-dropdown.expanded .dropdown-toggle {
+    color: var(--color-gold);
+  }
+
+  .nav-dropdown.expanded .dropdown-arrow {
+    transform: rotate(180deg);
+    color: var(--color-gold);
   }
 
   /* ---- Carousel single column ---- */
